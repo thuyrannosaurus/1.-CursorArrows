@@ -8,14 +8,14 @@
     <style type="text/tailwindcss">
         @layer components {
             .cursor-box {
-                @apply w-8 h-8 bg-violet-300 rounded-lg border-2 transition-transform duration-300 ease-spring
+                @apply w-6 h-6 bg-violet-700 rounded-lg border-2 border-white/50 transition-transform duration-300 ease-spring
                 hover:scale-110 hover:shadow-lg;
             }
             .cursor-label {
-                @apply ml-4 text-gray-200 text-sm font-mono;
+                @apply ml-4 text-gray-200 text-xs font-mono;
             }
             .cursor-container {
-                @apply flex items-center h-12;
+                @apply flex items-center h-6;
             }
         }
 
@@ -26,14 +26,14 @@
         }
     </style>
 </head>
-<body class="bg-black min-h-screen p-12">
+<body class="bg-gray-900 min-h-screen p-12">
     <div class="flex flex-col items-center">
         <h1 class="text-2xl font-bold text-white mb-1">Cursor types</h1>
         <div class="text-violet-300/70 mb-8 text-center">Hover over each box to get a preview of the different types of cursors. Inspired by @codingdev45</div>
 
         <div class="w-full max-w-6xl px-4">
             <div class="relative">
-                <div class="absolute inset-0 bg-violet-900/50 rounded-xl"></div>
+                <div class="absolute inset-0 bg-violet-900/20 rounded-xl"></div>
                 <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-6">
                     <!-- Default cursor -->
                     <div class="cursor-container">
