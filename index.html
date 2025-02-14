@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursors in Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .cursor-box {
+                @apply w-8 h-8 bg-violet-300 rounded-lg border-2 transition-transform duration-300 ease-spring
+                hover:scale-110 hover:shadow-lg;
+            }
+            .cursor-label {
+                @apply ml-4 text-gray-200 text-sm font-mono;
+            }
+            .cursor-container {
+                @apply flex items-center h-12;
+            }
+        }
+
+        @layer utilities {
+            .ease-spring {
+                transition-timing-function: cubic-bezier(0.4, 2.5, 0.6, 0.95);
+            }
+        }
+    </style>
+</head>
+<body class="bg-black min-h-screen p-12">
+    <div class="flex flex-col items-center">
+        <h1 class="text-2xl font-bold text-white mb-1">Cursor types</h1>
+        <div class="text-violet-300/70 mb-8 text-center">Hover over each box to get a preview of the different types of cursors. Inspired by @codingdev45</div>
+
+        <div class="w-full max-w-6xl px-4">
+            <div class="relative">
+                <div class="absolute inset-0 bg-violet-900/50 rounded-xl"></div>
+                <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-6">
+                    <!-- Default cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-default"></div>
+                        <span class="cursor-label">cursor-default</span>
+                    </div>
+
+                    <!-- Pointer cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-pointer"></div>
+                        <span class="cursor-label">cursor-pointer</span>
+                    </div>
+
+                    <!-- Wait cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-wait"></div>
+                        <span class="cursor-label">cursor-wait</span>
+                    </div>
+
+                    <!-- Text cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-text"></div>
+                        <span class="cursor-label">cursor-text</span>
+                    </div>
+
+                    <!-- Move cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-move"></div>
+                        <span class="cursor-label">cursor-move</span>
+                    </div>
+
+                    <!-- Help cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-help"></div>
+                        <span class="cursor-label">cursor-help</span>
+                    </div>
+
+                    <!-- Not allowed cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-not-allowed"></div>
+                        <span class="cursor-label">cursor-not-allowed</span>
+                    </div>
+
+                    <!-- Grab cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-grab"></div>
+                        <span class="cursor-label">cursor-grab</span>
+                    </div>
+
+                    <!-- Zoom in cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-zoom-in"></div>
+                        <span class="cursor-label">cursor-zoom-in</span>
+                    </div>
+
+                    <!-- Zoom out cursor -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-zoom-out"></div>
+                        <span class="cursor-label">cursor-zoom-out</span>
+                    </div>
+
+                    <!-- Additional cursor types -->
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-auto"></div>
+                        <span class="cursor-label">cursor-auto</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-none"></div>
+                        <span class="cursor-label">cursor-none</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-context-menu"></div>
+                        <span class="cursor-label">cursor-context-menu</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-progress"></div>
+                        <span class="cursor-label">cursor-progress</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-cell"></div>
+                        <span class="cursor-label">cursor-cell</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-crosshair"></div>
+                        <span class="cursor-label">cursor-crosshair</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-vertical-text"></div>
+                        <span class="cursor-label">cursor-vertical-text</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-alias"></div>
+                        <span class="cursor-label">cursor-alias</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-copy"></div>
+                        <span class="cursor-label">cursor-copy</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-no-drop"></div>
+                        <span class="cursor-label">cursor-no-drop</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-grabbing"></div>
+                        <span class="cursor-label">cursor-grabbing</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-all-scroll"></div>
+                        <span class="cursor-label">cursor-all-scroll</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-col-resize"></div>
+                        <span class="cursor-label">cursor-col-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-row-resize"></div>
+                        <span class="cursor-label">cursor-row-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-n-resize"></div>
+                        <span class="cursor-label">cursor-n-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-e-resize"></div>
+                        <span class="cursor-label">cursor-e-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-s-resize"></div>
+                        <span class="cursor-label">cursor-s-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-w-resize"></div>
+                        <span class="cursor-label">cursor-w-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-ne-resize"></div>
+                        <span class="cursor-label">cursor-ne-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-nw-resize"></div>
+                        <span class="cursor-label">cursor-nw-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-se-resize"></div>
+                        <span class="cursor-label">cursor-se-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-sw-resize"></div>
+                        <span class="cursor-label">cursor-sw-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-ew-resize"></div>
+                        <span class="cursor-label">cursor-ew-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-ns-resize"></div>
+                        <span class="cursor-label">cursor-ns-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-nesw-resize"></div>
+                        <span class="cursor-label">cursor-nesw-resize</span>
+                    </div>
+
+                    <div class="cursor-container">
+                        <div class="cursor-box cursor-nwse-resize"></div>
+                        <span class="cursor-label">cursor-nwse-resize</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
